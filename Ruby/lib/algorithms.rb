@@ -4,7 +4,16 @@
 # The result is called a 'digital root'.
 # Do not use string conversion within your method.
 def digital_root(number)
-
+  if number < 10 then return number end
+  remainder = 0
+  sum = 0
+  while(true)
+    remainder = number % 10
+    sum += remainder
+    if number / 10 == 0 then break end
+    number = number / 10
+  end
+  digital_root(sum)
 end
 
 # Write a function that takes a message and an increment amount.
@@ -12,7 +21,21 @@ end
 # Assume lowercase and no punctuation.
 # Preserve spaces.
 def caesar_cipher(string, shift)
+  alph = ('a'..'z').to_a
+  alphabet = Hash[alph.map.with_index.to_a]
+  user_string = string.split('')
+  str_arr = []
 
+  user_string.each do |element|
+    if element === ' '
+      str_arr.push(element)
+    else
+      num = alph.index(element)
+      num + shift > 26 ? str_arr << alphabet.key(num - shift) : str_arr << alphabet.key(num + shift)
+    end
+  end
+  
+  return str_arr.join('')
 end
 
 # Write a function that takes two strings.
