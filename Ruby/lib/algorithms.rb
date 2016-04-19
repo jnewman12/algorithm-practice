@@ -41,7 +41,22 @@ end
 # Write a function that takes two strings.
 # Return the longest common substring.
 def common_substrings(string_one, string_two)
-
+  # create multi-array that has the same indexes as string_one's length
+  # and each of those indexes is an array with as many indexes as string_two's length
+  array_length = Array.new(string_one.length){Array.new(string_two.length, 0)}  
+  length = 0
+  common_string = ""
+  string_one.each_char.with_index do |str1, index1|
+    string_two.each_char.with_index do |str2, index2|
+      next if str1 != str2
+      array_length[index1][index2] = (index1.zero? || index2.zero?) ? 1 : array_length[index1-1][index2-1] + 1
+      if array_length[index1][index2] > length
+        length = array_length[index1][index2]
+        common_string = string_one[index1 - length + 1, length]
+      end
+    end
+  end
+  common_string
 end
 
 # Write a function that takes an array of integers and returns their sum.
