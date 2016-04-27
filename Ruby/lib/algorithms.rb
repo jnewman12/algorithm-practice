@@ -62,7 +62,8 @@ end
 # Write a function that takes an array of integers and returns their sum.
 # Use recursion.
 def sum_rec(numbers)
-
+  return 0 unless numbers.length > 0
+  return numbers.shift + sum_rec(numbers)
 end
 
 # Write a function that takes n, the length of the sequence.
