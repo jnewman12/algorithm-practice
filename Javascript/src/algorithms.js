@@ -9,7 +9,7 @@ if(typeof Algorithms === "undefined") {
 // Keep repeating until there is only one digit in the result, called the "digital root".
 // Do not use string conversion within your method.
 Algorithms.digitalRoot = function(number) {
-	while( number > 9) {
+	while(number > 9) {
 		n = 0;
 		while(number > 0) {
 			n += number % 10;
