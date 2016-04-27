@@ -8,9 +8,31 @@ if(typeof Algorithms === "undefined") {
 // If it is greater than or equal to 10, sum the digits of the resulting number.
 // Keep repeating until there is only one digit in the result, called the "digital root".
 // Do not use string conversion within your method.
-Algorithms.digitalRoot = function (number) {
-
-};
+/*
+def digital_root(number)
+  if number < 10 then return number end
+  remainder = 0
+  sum = 0
+  while(true)
+    remainder = number % 10
+    sum += remainder
+    if number / 10 == 0 then break end
+    number = number / 10
+  end
+  digital_root(sum)
+end
+*/
+Algorithms.digitalRoot = function(number) {
+	while( number > 9) {
+		n = 0;
+		while(number > 0) {
+			n += number % 10;
+			number = Math.floor(number/10);
+		}
+		number = n;
+	}
+	return number;
+}; 
 
 // Write a function that takes a message and an increment amount and outputs the same letters shifted by that amount in the alphabet.
 // Assume lowercase and no punctuation.
