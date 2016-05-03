@@ -24,7 +24,24 @@ Algorithms.digitalRoot = function(number) {
 // Assume lowercase and no punctuation.
 // Preserve spaces.
 Algorithms.caesarCipher = function (string, shift) {
-
+	// caesarCipher = function (string, shift) {
+	//   var alph = 'abcdefghijklmnopqrstuvwxyz'.split('');
+	//   var alphabet = Object.assign({}, alph);
+	//   var userString = string.split('');
+	//   var stringArray = [];
+	  
+	//   userString.forEach(function(index, element) {
+	//   	if (index === ' ') {
+	//   		stringArray.push(index);
+	//   		console.log(alphabet[element]);
+	//   	} else {
+	//   		// var num = alph.indexOf(index);
+	//   		// num + shift > 26 ? stringArray.push() :
+	//   	}
+	//   });
+	//   console.log(alphabet);
+	// };
+	// caesarCipher('i', 4);
 };
 
 // Write a function that takes two strings and returns the lenght of the longest common substring.
