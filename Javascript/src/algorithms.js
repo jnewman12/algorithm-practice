@@ -46,7 +46,7 @@ Algorithms.caesarCipher = function (string, shift) {
   return stringArray.join('');
 };
 
-// Write a function that takes two strings and returns the lenght of the longest common substring.
+// Write a function that takes two strings and returns the length of the longest common substring.
 Algorithms.commonSubstrings = function (stringOne, stringTwo) {
 
 };
@@ -70,7 +70,14 @@ Algorithms.fibs = function (number) {
 // Write a function that takes a string and returns true if it's a palindrome, false if it's not.
 // Your solution should take less time and memory than rebuilding the string backward and comparing the two.
 Algorithms.isPalindrome = function (string) {
+  var str = string;
+  var backward = str.split('').reverse().join('');
 
+  if (str == backward) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 // Implement the Folding Cipher.
