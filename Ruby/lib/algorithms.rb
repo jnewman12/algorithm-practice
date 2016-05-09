@@ -76,7 +76,7 @@ end
 # Return true if the string is a palindrome, otherwise return false.
 # It should take less time and memory than reversing the string.
 def is_palindrome?(string)
-
+  return true if string.reverse == string
 end
 
 # Write a method that takes a string as input.

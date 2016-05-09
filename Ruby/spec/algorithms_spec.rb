@@ -32,10 +32,10 @@ end
 #   specify { expect(fibs(5)).to eq([0, 1, 1, 2, 3]) }
 # end
 
-# describe 'is_palindrome?' do
-#   specify { expect(is_palindrome?('ricercar')).to be_falsy }
-#   specify { expect(is_palindrome?('racecar')).to be_truthy }
-# end
+describe 'is_palindrome?' do
+  specify { expect(is_palindrome?('ricercar')).to be_falsy }
+  specify { expect(is_palindrome?('racecar')).to be_truthy }
+end
 
 # describe 'valid_ip?' do
 #   specify { expect(valid_ip?('1.1.1.1')).to be_truthy }
