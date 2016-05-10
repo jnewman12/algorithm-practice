@@ -69,7 +69,14 @@ end
 # Write a function that takes n, the length of the sequence.
 # Return the first n elements from the fibonnacci sequence as an array.
 def fibs(n)
-
+  sequence = [1]  
+  n.times do
+    current_number, last_number = sequence.last(2)
+    sequence << current_number + (last_number or 0)
+  end
+ 
+  sequence.pop
+  return sequence
 end
 
 # Write a function that takes a string.
