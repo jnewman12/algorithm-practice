@@ -34,6 +34,8 @@ Algorithms.caesarCipher = function (string, shift) {
   		stringArray.push(element);
   	} else {
   		var num = alph.indexOf(element);
+      // note
+      // this is failing 2nd test...need to fix
   		if (num + shift > 26) {
   			var getProp = num - shift;
   			stringArray.push(alphabet[getProp]);
