@@ -80,54 +80,54 @@ describe("uniqSubs", function() {
   });
 });
 
-describe("lcs", function() {
-  it("should return the largest subsum", function() {
-    var array = [4, -1, 5, 6, -13, 2]
-    expect(Algorithms.lcs(array)).toBe(14);
-  });
+// describe("lcs", function() {
+//   it("should return the largest subsum", function() {
+//     var array = [4, -1, 5, 6, -13, 2]
+//     expect(Algorithms.lcs(array)).toBe(14);
+//   });
 
-  it("should return the largest subsum", function() {
-    var array = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-    expect(Algorithms.lcs(array)).toBe(6);
-  });
-});
+//   it("should return the largest subsum", function() {
+//     var array = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+//     expect(Algorithms.lcs(array)).toBe(6);
+//   });
+// });
 
-describe("sillyYears", function() {
-  it("should return the ten subsequent silly years", function() {
-    var array = [2307, 2417, 2527, 2637, 2747, 2857, 2967, 3406, 3516, 3626]
-    expect(Algorithms.sillyYears(1978)).toEqual(array);
-  });
+// describe("sillyYears", function() {
+//   it("should return the ten subsequent silly years", function() {
+//     var array = [2307, 2417, 2527, 2637, 2747, 2857, 2967, 3406, 3516, 3626]
+//     expect(Algorithms.sillyYears(1978)).toEqual(array);
+//   });
 
-  it("should return the ten subsequent silly years", function() {
-    var array = [2417, 2527, 2637, 2747, 2857, 2967, 3406, 3516, 3626, 3736]
-    expect(Algorithms.sillyYears(2307)).toEqual(array);
-  });
-});
+//   it("should return the ten subsequent silly years", function() {
+//     var array = [2417, 2527, 2637, 2747, 2857, 2967, 3406, 3516, 3626, 3736]
+//     expect(Algorithms.sillyYears(2307)).toEqual(array);
+//   });
+// });
 
-describe("pairSum", function() {
-  it("should return all the pairs that sum to 0", function() {
-    var array = [[-1, 1]]
-    expect(Algorithms.pairSum([1, 2, -1], 0)).toEqual(array);
-  });
+// describe("pairSum", function() {
+//   it("should return all the pairs that sum to 0", function() {
+//     var array = [[-1, 1]]
+//     expect(Algorithms.pairSum([1, 2, -1], 0)).toEqual(array);
+//   });
 
-  it("should return all the pairs that sum to 1", function() {
-    var array = [[-1, 2]]
-    expect(Algorithms.pairSum([1, 2, -1, -1, -2], 1)).toEqual(array);
-  });
-});
+//   it("should return all the pairs that sum to 1", function() {
+//     var array = [[-1, 2]]
+//     expect(Algorithms.pairSum([1, 2, -1, -1, -2], 1)).toEqual(array);
+//   });
+// });
 
-describe("matrixRegionSum", function() {
-  it("should return the sum of the elements within the coordinates", function() {
-    var matrix = [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
-    var topLeftCoords = [0, 0]
-    var bottomRightCoords = [1, 1]
-    expect(Algorithms.matrixRegionSum(matrix, topLeftCoords, bottomRightCoords)).toBe(8);
-  });
+// describe("matrixRegionSum", function() {
+//   it("should return the sum of the elements within the coordinates", function() {
+//     var matrix = [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
+//     var topLeftCoords = [0, 0]
+//     var bottomRightCoords = [1, 1]
+//     expect(Algorithms.matrixRegionSum(matrix, topLeftCoords, bottomRightCoords)).toBe(8);
+//   });
 
-  it("should return the sum of the elements within the coordinates", function() {
-    var matrix = [[2, 3, 4], [3, 4, 5], [4, 5, 6]]
-    var topLeftCoords = [0, 0]
-    var bottomRightCoords = [2, 2]
-    expect(Algorithms.matrixRegionSum(matrix, topLeftCoords, bottomRightCoords)).toBe(36);
-  });
-});
+//   it("should return the sum of the elements within the coordinates", function() {
+//     var matrix = [[2, 3, 4], [3, 4, 5], [4, 5, 6]]
+//     var topLeftCoords = [0, 0]
+//     var bottomRightCoords = [2, 2]
+//     expect(Algorithms.matrixRegionSum(matrix, topLeftCoords, bottomRightCoords)).toBe(36);
+//   });
+// });
