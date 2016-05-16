@@ -37,10 +37,10 @@ describe 'is_palindrome?' do
   specify { expect(is_palindrome?('racecar')).to be_truthy }
 end
 
-# describe 'valid_ip?' do
-#   specify { expect(valid_ip?('1.1.1.1')).to be_truthy }
-#   specify { expect(valid_ip?('256.2.2.2')).to be_falsy }
-# end
+describe 'valid_ip?' do
+  specify { expect(valid_ip?('1.1.1.1')).to be_truthy }
+  specify { expect(valid_ip?('256.2.2.2')).to be_falsy }
+end
 
 # describe 'folding_cipher' do
 #   specify { expect(folding_cipher('abcm')).to eq('zyxn') }
