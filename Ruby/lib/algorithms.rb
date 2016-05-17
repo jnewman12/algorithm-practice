@@ -89,8 +89,9 @@ end
 # Write a method that takes a string as input.
 # It should return true if the input is a valid IPv4 address.
 # Valid IPs are anything between '0.0.0.0' and '255.255.255.255'.
-def valid_ip?(string)
-  string.each_char.with_index do |elem|
+def valid_ip?(address)
+  address.split(".").all? do |number|
+    number.to_i <= 255 && number.to_i >= 0
   end
 end
 
