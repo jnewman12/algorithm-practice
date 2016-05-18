@@ -74,10 +74,13 @@ def fibs(n)
     current_number, last_number = sequence.last(2)
     sequence << current_number + (last_number or 0)
   end
- 
-  sequence.pop
+  
+  # need to refactor, but it passes
+  sequence.insert(0,0)
+  sequence.pop(2)
   return sequence
 end
+
 
 # Write a function that takes a string.
 # Return true if the string is a palindrome, otherwise return false.
