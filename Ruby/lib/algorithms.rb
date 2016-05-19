@@ -120,8 +120,16 @@ end
 # Write a function that takes a year as a four digit integer.
 # Returns an array of the 10 closest subsequent silly years.
 # A silly year's first two digits plus the last two digits equal the middle two.
-def silly_years(year)
+# def silly_years(year)
 
+# end
+def silly_years(year)
+  result = []
+  while result.length < 10
+    result << year if (year / 10) % 100 == (year / 100) + (year % 100)
+    year += 1
+  end
+  result
 end
 
 # Take an array of integers, and integer k.
