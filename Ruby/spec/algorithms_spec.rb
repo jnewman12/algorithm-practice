@@ -47,34 +47,34 @@ end
 #   specify { expect(folding_cipher('zyxn')).to eq('abcm') }
 # end
 
-# describe 'uniq_subs' do
-#   it 'should return all the substrings' do
-#     array = %w(a b c d ab bc cd abc bcd abcd)
-#     expect(uniq_subs('abcd')).to match_array(array)
-#   end
+describe 'uniq_subs' do
+  it 'should return all the substrings' do
+    array = %w(a b c d ab bc cd abc bcd abcd)
+    expect(uniq_subs('abcd')).to match_array(array)
+  end
 
-#   it "shouldn't have repeats" do
-#     array = %w(d du dud dude u ud ude de e)
-#     expect(uniq_subs('dude')).to match_array(array)
-#   end
-# end
+  it "shouldn't have repeats" do
+    array = %w(d du dud dude u ud ude de e)
+    expect(uniq_subs('dude')).to match_array(array)
+  end
+end
 
 # describe 'lcs' do
 #   specify { expect(lcs([4, -1, 5, 6, -13, 2])).to eq(14) }
 #   specify { expect(lcs([-2, 1, -3, 4, -1, 2, 1, -5, 4])).to eq(6) }
 # end
 
-describe 'silly_years' do
-  it 'should return the ten subsequent silly years' do
-    array = [2307, 2417, 2527, 2637, 2747, 2857, 2967, 3406, 3516, 3626]
-    expect(silly_years(1978)).to match_array(array)
-  end
+# describe 'silly_years' do
+#   it 'should return the ten subsequent silly years' do
+#     array = [2307, 2417, 2527, 2637, 2747, 2857, 2967, 3406, 3516, 3626]
+#     expect(silly_years(1978)).to match_array(array)
+#   end
 
-  it 'should return the ten subsequent silly years' do
-    array = [2417, 2527, 2637, 2747, 2857, 2967, 3406, 3516, 3626, 3736]
-    expect(silly_years(2307)).to match_array(array)
-  end
-end
+#   it 'should return the ten subsequent silly years' do
+#     array = [2417, 2527, 2637, 2747, 2857, 2967, 3406, 3516, 3626, 3736]
+#     expect(silly_years(2307)).to match_array(array)
+#   end
+# end
 
 # describe 'pair_sum' do
 #   let(:set) { Set.new }

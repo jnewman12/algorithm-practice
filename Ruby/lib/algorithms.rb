@@ -105,9 +105,9 @@ def folding_cipher(string)
 
 end
 
-# Write a method that finds all the unique substrings for a word.
+# Write a method that finds all the unique substrings for a word
 def uniq_subs(string)
-
+  (0..string.length).inject([]) { |ai, i| (1..string.length - i).inject(ai){|aj,j| aj << string[i,j] } }.uniq
 end
 
 # Given an array of integers find the largest contiguous subsum.
