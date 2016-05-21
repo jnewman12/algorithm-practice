@@ -121,12 +121,17 @@ end
 # Returns an array of the 10 closest subsequent silly years.
 # A silly year's first two digits plus the last two digits equal the middle two.
 def silly_years(year)
-  result = []
-  while result.length < 10
-    result << year if (year / 10) % 100 == (year / 100) + (year % 100)
+  years = []
+
+  until years.length == 10
+    digits = year.to_s
+    first_two, middle_two, last_two =
+      digits[0..1], digits[1..2], digits[2..-1]
+    [first_two, middle_two, last_two].map(&:to_i)
+    years << year if (first_two + last_two) == middle_two
     year += 1
   end
-  result
+  years
 end
 
 # Take an array of integers, and integer k.
