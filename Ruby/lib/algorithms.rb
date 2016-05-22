@@ -121,17 +121,17 @@ end
 # Returns an array of the 10 closest subsequent silly years.
 # A silly year's first two digits plus the last two digits equal the middle two.
 def silly_years(year)
-  years = []
-
-  until years.length == 10
-    digits = year.to_s
-    first_two, middle_two, last_two =
-      digits[0..1], digits[1..2], digits[2..-1]
-    [first_two, middle_two, last_two].map(&:to_i)
-    years << year if (first_two + last_two) == middle_two
+  answer = []
+  while answer.length <= 10
     year += 1
+    year_str = year.to_s
+    first, middle, last = year_str[0..1], year_str[1..2], year_str[2..3]
+    ints = [first,middle,last].map(&:to_i)
+    if ints[0] + ints[2] == ints[1]
+      answer << year
+    end
   end
-  years
+  answer
 end
 
 # Take an array of integers, and integer k.
@@ -140,7 +140,6 @@ end
 # Time complexity: O(n).
 # Return a set.
 def pair_sum(array, k)
-
 end
 
 # Take a matrix of integers and coordinates.
