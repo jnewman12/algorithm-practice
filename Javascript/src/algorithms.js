@@ -66,7 +66,13 @@ Algorithms.sumRec = function (numbers) {
 
 // Write a function which returns the first n elements from the fibonnacci sequence, given n.
 Algorithms.fibs = function (number) {
-
+  var fibArray = [];
+  for (var fibArray = [0,1], i=0, j=1, k=0; k < number; i=j, j=x, k++) {
+    x = i + j;
+    fibArray.push(x);
+  }
+  console.log(fibArray);
+  return fibArray
 };
 
 // Write a function that takes a string and returns true if it's a palindrome, false if it's not.
