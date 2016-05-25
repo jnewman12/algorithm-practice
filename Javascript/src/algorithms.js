@@ -71,7 +71,7 @@ Algorithms.fibs = function (number) {
     x = i + j;
     fibArray.push(x);
   }
-  console.log(fibArray);
+  // not sure why??
   return fibArray
 };
 
