@@ -67,11 +67,11 @@ Algorithms.sumRec = function (numbers) {
 // Write a function which returns the first n elements from the fibonnacci sequence, given n.
 Algorithms.fibs = function (number) {
   if (number === 0) {
-      return 0;
+    return 0;
   } else if (number === 1) {
-      return 1;
+    return 1;
   } else {
-      return fibs(number - 1)+ fibs(number - 2);
+    return fibs(number - 1)+ fibs(number - 2);
   }
 };
 
