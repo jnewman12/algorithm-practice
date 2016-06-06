@@ -42,10 +42,10 @@ describe 'valid_ip?' do
   specify { expect(valid_ip?('256.2.2.2')).to be_falsy }
 end
 
-# describe 'folding_cipher' do
-#   specify { expect(folding_cipher('abcm')).to eq('zyxn') }
-#   specify { expect(folding_cipher('zyxn')).to eq('abcm') }
-# end
+describe 'folding_cipher' do
+  specify { expect(folding_cipher('abcm')).to eq('zyxn') }
+  specify { expect(folding_cipher('zyxn')).to eq('abcm') }
+end
 
 describe 'uniq_subs' do
   it 'should return all the substrings' do
